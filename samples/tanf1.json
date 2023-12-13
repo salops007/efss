@@ -1,0 +1,977 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/LilaJohn"
+      },
+      "resource": {    
+      "resourceType": "Patient",
+      "id": "LilaJohn",
+      "name": [
+        {
+          "given": [
+            "Lila"
+          ],
+          "family": "John"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "88 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "1988-11-11",
+      "gender": "female",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Mentor/Tribal Elder"
+            }
+          ],
+          "name": {
+            "given": [
+              "Kai"
+            ],
+            "family": "Ganka"
+          },
+          "telecom": [
+            {
+              "value": "555-666-7777",
+              "use": "work"
+            }
+          ],
+          "gender": "male"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN, Lakota Sioux"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/NayeliJohn"
+      },
+      "resource": {
+      "resourceType": "Patient",
+      "id": "NayeliJohn",
+      "name": [
+        {
+          "given": [
+            "Nayeli"
+          ],
+          "family": "John"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "88 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "2009-08-07",
+      "gender": "female",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Mother"
+            }
+          ],
+          "name": {
+            "given": [
+              "Lila"
+            ],
+            "family": "John"
+          },
+          "telecom": [
+            {
+              "value": "555-666-7777",
+              "use": "work"
+            }
+          ],
+          "gender": "female"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN, Lakota Sioux"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/TakodaJohn"
+      },
+      "resource": {
+      "resourceType": "Patient",
+      "id": "TakodaJohn",
+      "name": [
+        {
+          "given": [
+            "Takoda"
+          ],
+          "family": "John"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "88 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "2013-07-13",
+      "gender": "male",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Mother"
+            }
+          ],
+          "name": {
+            "given": [
+              "Lila"
+            ],
+            "family": "John"
+          },
+          "telecom": [
+            {
+              "value": "555-666-7777",
+              "use": "work"
+            }
+          ],
+          "gender": "female"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN, Lakota Sioux"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/KaiJohn"
+      },
+      "resource": {
+      "resourceType": "Patient",
+      "id": "KaiJohn",
+      "name": [
+        {
+          "given": [
+            "Kai"
+          ],
+          "family": "Ganka"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "55 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "1950-05-10",
+      "gender": "male",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Professional/Tribal Elder"
+            }
+          ]
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN, Lakota Sioux"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/MaryRose"
+      },
+      "resource": {
+      "resourceType": "Patient",
+      "id": "MaryRose",
+      "name": [
+        {
+          "given": [
+            "Mary"
+          ],
+          "family": "Rose"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "77 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "1952-11-29",
+      "gender": "female",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Professional/Social Worker"
+            }
+          ]
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/JimStone"
+      },
+      "resource": {
+      "resourceType": "Patient",
+      "id": "JimStone",
+      "name": [
+        {
+          "given": [
+            "Jim"
+          ],
+          "family": "Stone"
+        }
+      ],
+      "address": [
+        {
+          "line": [
+            "55 Pine Ridge Reservation Road"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "birthDate": "1956-09-18",
+      "gender": "male",
+      "contact": [
+        {
+          "relationship": [
+            {
+              "text": "Professional/TANF Case Worker"
+            }
+          ]
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "EN"
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/Encounter-001"
+      },
+      "resource": {
+      "resourceType": "Encounter",
+      "identifier": [
+        {
+          "value": "Encounter-001"
+        }
+      ],
+      "status": "completed",
+      "class": {
+        "code": "ambulatory"
+      },
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "case-management",
+              "display": "Social work consultation"
+            }
+          ]
+        }
+      ],
+      "serviceType": {
+        "coding": [
+          {
+            "code": "social-services",
+            "display": "Tribal TANF support services"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "Patient/LilaJohn"
+      },
+      "participant": [
+        {
+          "type": [
+            {
+              "coding": [
+                {
+                  "code": "social-worker",
+                  "display": "Social Worker"
+                }
+              ]
+            }
+          ],
+          "period": {
+            "start": "2023-08-15T10:00:00",
+            "end": "2023-08-15T11:00:00"
+          },
+          "individual": {
+            "display": "Patient/MaryRose"
+          }
+        }
+      ],
+      "period": {
+        "start": "2023-08-15T10:00:00",
+        "end": "2023-08-15T11:00:00"
+      },
+      "reasonCode": [
+        {
+          "text": "Consultation for Tribal TANF Application Process"
+        }
+      ],
+      "location": [
+        {
+          "display": "Location/OglalaLakotaCommunityCenter"
+        }
+      ],
+      "serviceProvider": {
+        "display": "Organization/OglalaLakotaTANFService"
+      }
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/Practitioner-MRose-001"
+      },
+      
+      "resource": {
+      "resourceType": "Practitioner",
+      "identifier": [
+        {
+          "value": "Practitioner-MRose-001"
+        }
+      ],
+      "active": true,
+      "name": [
+        {
+          "use": "official",
+          "family": "Rose",
+          "given": [
+            "Mary"
+          ]
+        }
+      ],
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "605-555-0123",
+          "use": "work"
+        }
+      ],
+      "address": [
+        {
+          "use": "work",
+          "line": [
+            "123 Wellness Drive"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1980-04-23",
+      "qualification": [
+        {
+          "identifier": [
+            {
+              "value": "SW-SD-987654"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "SW",
+                "display": "Licensed Social Worker"
+              }
+            ]
+          },
+          "period": {
+            "start": "2010-05-01"
+          },
+          "issuer": {
+            "display": "Organization/OglalaLakotaSocialServices"
+          }
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "coding": [
+              {
+                "code": "EN",
+                "display": "English"
+              }
+            ]
+          },
+          "preferred": true
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Organization/Organization-OLCC-001"
+      },
+      "resource": {
+      "resourceType": "Organization",
+      "identifier": [
+        {
+          "value": "Organization-OLCC-001"
+        }
+      ],
+      "active": true,
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "comm",
+              "display": "Community Services"
+            }
+          ]
+        }
+      ],
+      "name": "Oglala Lakota Community Center",
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "605-555-0200",
+          "use": "work"
+        }
+      ],
+      "address": [
+        {
+          "use": "work",
+          "line": [
+            "456 Community Way"
+          ],
+          "city": "Pine Ridge",
+          "state": "South Dakota",
+          "postalCode": "57770"
+        }
+      ],
+      "partOf": {
+        "display": "Organization/OglalaLakotaTribe"
+      },
+      "contact": [
+        {
+          "purpose": {
+            "coding": [
+              {
+                "code": "info",
+                "display": "General Information"
+              }
+            ]
+          },
+          "name": {
+            "use": "official",
+            "family": "Community",
+            "given": [
+              "Info"
+            ]
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "info@olcc.org"
+            }
+          ]
+        }
+      ],
+      "endpoint": [
+        {
+          "display": "Endpoint/CommunityServicesEndpoint"
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "resource": {
+      "resourceType": "Group",
+      "identifier": [
+        {
+          "value": "SDOHCC-Group-LilaFamily-001"
+        }
+      ],
+      "type": "person",
+      "actual": true,
+      "name": "Lila John's Family Group",
+      "quantity": 3,
+      "member": [
+        {
+          "entity": {
+            "reference": "Patient/LilaJohn"
+          },
+          "period": {
+            "start": "2023-01-01"
+          },
+          "inactive": false
+        },
+        {
+          "entity": {
+            "reference": "Patient/NayeliJohn"
+          },
+          "period": {
+            "start": "2023-01-01"
+          },
+          "inactive": false
+        },
+        {
+          "entity": {
+            "reference": "Patient/TakodaJohn"
+          },
+          "period": {
+            "start": "2023-01-01"
+          },
+          "inactive": false
+        }
+      ],
+      "characteristic": [
+        {
+          "code": {
+            "coding": [
+              {
+                "code": "family-unit",
+                "display": "Family Unit"
+              }
+            ]
+          },
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "tribal-tanf-eligible",
+                "display": "Eligible for Tribal TANF"
+              }
+            ]
+          },
+          "exclude": false
+        }
+      ],
+      "managingEntity": {
+        "display": "Organization/OglalaLakotaCommunityCenter"
+      }
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/Condition-FinancialInstability-001"
+      },
+      "resource": {
+      "resourceType": "Condition",
+      "identifier": [
+        {
+          "value": "Condition-FinancialInstability-001"
+        }
+      ],
+      "clinicalStatus": {
+        "coding": [
+          {
+            "code": "active"
+          }
+        ]
+      },
+      "verificationStatus": {
+        "coding": [
+          {
+            "code": "confirmed"
+          }
+        ]
+      },
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "social",
+              "display": "Social Determinants of Health"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "financial-instability",
+            "display": "Financial Instability"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "onsetDateTime": "2023-07-01",
+      "severity": {
+        "coding": [
+          {
+            "code": "severe",
+            "display": "Severe Impact"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "detail": [
+            {
+              "reference": "Encounter/Encounter-001"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "unemployment",
+                "display": "Unemployment"
+              }
+            ]
+          }
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/ServiceRequest-TANF-001"
+      },
+      "resource": {
+      "resourceType": "ServiceRequest",
+      "identifier": [
+        {
+          "value": "ServiceRequest-TANF-001"
+        }
+      ],
+      "status": "active",
+      "intent": "order",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "tanf-welfare-support",
+              "display": "TANF/Welfare Support"
+            }
+          ]
+        }
+      ],
+      "priority": "routine",
+      "subject": {
+        "reference": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "encounter": {
+        "reference": "Encounter/Encounter-001"
+      },
+      "authoredOn": "2023-08-01",
+      "requester": {
+        "reference": "Practitioner/Practitioner-MRose-001"
+      },
+      "performerType": {
+        "coding": [
+          {
+            "code": "social-service-provider",
+            "display": "Social Service Provider"
+          }
+        ]
+      },
+      "reasonCode": [
+        {
+          "coding": [
+            {
+              "code": "financial-need",
+              "display": "Financial Need due to Unemployment"
+            }
+          ]
+        }
+      ],
+      "requestedPeriod": {
+        "start": "2023-08-01",
+        "end": "2023-12-31"
+      }
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Goal/Goal-FinancialStability-001"
+      },
+      "resource": {
+      "resourceType": "Goal",
+      "identifier": [
+        {
+          "value": "Goal-FinancialStability-001"
+        }
+      ],
+      "lifecycleStatus": "active",
+      "achievementStatus": {
+        "coding": [
+          {
+            "code": "in-progress"
+          }
+        ]
+      },
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "financial-goals",
+              "display": "Financial Goals"
+            }
+          ]
+        }
+      ],
+      "description": {
+        "coding": [
+          {
+            "code": "achieve-financial-stability",
+            "display": "Achieve Financial Stability through Tribal TANF"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "startDate": "2023-08-01",
+      "target": [
+        {
+          "measure": {
+            "coding": [
+              {
+                "code": "financial-self-sufficiency",
+                "display": "Financial Self-Sufficiency"
+              }
+            ]
+          },
+          "detailString": "Secure stable employment and manage essential living expenses",
+          "dueDate": "2024-08-01"
+        }
+      ],
+      "expressedBy": {
+        "reference": "Practitioner/Practitioner-MRose-001"
+      },
+      "addresses": [
+        {
+          "reference": "Condition/Condition-FinancialInstability-001"
+        }
+      ],
+      "note": [
+        {
+          "text": "Lila John's family, a unit comprising herself and her two children, Nayeli and Takoda, has been facing financial challenges following Lila's recent unemployment. The primary goal set for the family is to achieve financial stability through the Tribal TANF program. This includes securing stable employment for Lila in a role that aligns with her skills and experience, ensuring that the family can manage essential living expenses without undue stress. The plan, expressed and monitored by Mary Rose, the social worker, involves targeted job search support, financial literacy training, and consistent follow-ups to assess progress. The family's participation in cultural and community activities as part of the TANF program is also seen as vital in maintaining their cultural identity and community ties, contributing to their overall well-being and social stability. Progress towards this goal is expected to be significant by the due date of August 2024, with intermediate milestones set every six months to review and adjust the support plan as needed."
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/Observation-HousingStability-001"
+      },
+      "resource": {
+      "resourceType": "Observation",
+      "identifier": [
+        {
+          "value": "Observation-HousingStability-001"
+        }
+      ],
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "social-observations",
+              "display": "Social Observations"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "housing-stability",
+            "display": "Housing Stability"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "effectiveDateTime": "2023-08-15",
+      "performer": [
+        {
+          "reference": "Practitioner/Practitioner-MRose-001"
+        }
+      ],
+      "valueString": "Adequate and stable housing situation, but with concerns about long-term affordability due to current unemployment",
+      "interpretation": [
+        {
+          "coding": [
+            {
+              "code": "requires-action",
+              "display": "Requires action to ensure long-term stability"
+            }
+          ]
+        }
+      ],
+      "note": [
+        {
+          "text": "Regular assessments of housing conditions indicate a stable environment for Lila and her children. However, the financial impact of Lila’s unemployment presents a risk to maintaining long-term housing stability. Recommended actions include securing stable employment for Lila and exploring financial assistance programs to support housing costs."
+        }
+      ]
+    }},
+    {
+      "request": {
+        "method": "PUT",
+        "url": "CarePlan/CarePlan-LilaFamily-001"
+      },
+      "resource": {
+      "resourceType": "CarePlan",
+      "identifier": [
+        {
+          "value": "CarePlan-LilaFamily-001"
+        }
+      ],
+      "status": "active",
+      "intent": "plan",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "social-care-plan",
+              "display": "Social Care Plan"
+            }
+          ]
+        }
+      ],
+      "title": "Lila John's Family Social Support Plan",
+      "subject": {
+        "reference": "Group/SDOHCC-Group-LilaFamily-001"
+      },
+      "period": {
+        "start": "2023-08-01",
+        "end": "2024-08-01"
+      },
+      "author": {
+        "reference": "Practitioner/Practitioner-MRose-001"
+      },
+      "goal": [
+        {
+          "reference": "Goal/Goal-FinancialStability-001"
+        }
+      ],
+      "activity": [
+        {
+          "detail": {
+            "category": {
+              "coding": [
+                {
+                  "code": "social-activity",
+                  "display": "Social Activity"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "employment-support",
+                  "display": "Employment Support"
+                }
+              ]
+            },
+            "reasonCode": [
+              {
+                "coding": [
+                  {
+                    "code": "unemployment",
+                    "display": "Unemployment"
+                  }
+                ]
+              }
+            ],
+            "scheduledPeriod": {
+              "start": "2023-08-01",
+              "end": "2024-08-01"
+            },
+            "location": {
+              "display": "Location/OglalaLakotaCommunityCenter"
+            },
+            "performer": [
+              {
+                "reference": "Practitioner/Practitioner-MRose-001"
+              }
+            ]
+          }
+        }
+      ],
+      "addresses": [
+        {
+          "reference": "Condition/Condition-FinancialInstability-001"
+        }
+      ],
+      "note": [
+        {
+          "text": "This care plan is designed to address the immediate and long-term social needs of Lila John’s family, with a focus on achieving financial stability through employment support, financial planning, and access to Tribal TANF benefits. Regular reviews and adjustments to the plan are scheduled to ensure that the family’s evolving needs are met, and that they remain engaged with the necessary social services and community support."
+        }
+      ]
+    }}
+  ],
+  "type": "transaction",
+  "resourceType": "Bundle"
+}
