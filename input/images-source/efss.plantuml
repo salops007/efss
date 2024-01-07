@@ -1,8 +1,8 @@
 @startuml
 
 
-scale 320 width
-scale 320 height
+scale 620 width
+scale 620 height
 
 !theme toy
 
@@ -23,11 +23,7 @@ martialStatus : Code
 communication : communication
 }
 
-class Association {
-+ type : Code
-+ status : Code
-+ timePeriod : Period
-}
+ 
 
 ScreeningGroup : identifier :Identifier
 ScreeningGroup : category : Code
@@ -39,16 +35,17 @@ class ScreeningGroup {
 }
 
 class LifeSet {
-+ subject : Individual
+    
++ individual : Individual
 }
 
-Individual "*" <--o "1" Association : Associations
+LifeSet : category : Code
+LifeSet : type : Code
+ 
 
-Individual "1" <--o "1" Association : Subject
+Individual "*" <--o "0" LifeSet : association
 
-Individual "1" <--o "1" LifeSet : Subject
-
-Individual "*" <--o "1" ScreeningGroup : Associations
+Individual "*" <--o "1" ScreeningGroup : member
 
    
 

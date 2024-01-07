@@ -1,0 +1,649 @@
+{
+    "entry": [
+      {
+        "request": {
+          "method": "POST",
+          "url": "Patient/1"
+        },
+        "resource": {
+          "resourceType": "Patient",
+          "name": [
+            {
+              "given": [
+                "Abby"
+              ],
+              "family": "Johnson"
+            }
+          ],
+          "birthDate": "2011-05-05",
+          "gender": "female",
+          "contact": [
+            {
+              "relationship": [
+                {
+                  "text": "Grandmother"
+                }
+              ],
+              "name": {
+                "given": [
+                  "Abby"
+                ],
+                "family": "Smith"
+              },
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "888-555-1212"
+                }
+              ],
+              "gender": "female",
+              "communication": [
+                {
+                  "language": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/valueset/languages",
+                        "code": "en"
+                      }
+                    ]
+                  },
+                  "preferred": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Patient/2"
+        },
+        "resource": {
+          "resourceType": "Patient",
+          "name": [
+            {
+              "given": [
+                "Abby"
+              ],
+              "family": "Grandmother"
+            }
+          ],
+          "active": true,
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "777-555-1212"
+            }
+          ],
+          "gender": "female",
+          "birthDate": "1950-09-05",
+          "communication": [
+            {
+              "language": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/valueset/languages",
+                    "code": "en"
+                  }
+                ],
+                "preferred": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Patient/3"
+        },
+        "resource": {
+          "resourceType": "Patient",
+          "name": [
+            {
+              "given": [
+                "Abby"
+              ],
+              "family": "Half-brother"
+            }
+          ],
+          "active": true,
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "777-555-1212"
+            }
+          ],
+          "gender": "male",
+          "birthDate": "2008-10-05",
+          "communication": {
+            "language": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/valueset/languages",
+                  "code": "en"
+                }
+              ],
+              "preferred": true
+            }
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Patient/4"
+        },
+        "resource": {
+          "resourceType": "Patient",
+          "name": [
+            {
+              "given": [
+                "Abbys"
+              ],
+              "family": "uncle"
+            }
+          ],
+          "active": true,
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "777-555-1212"
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1950-09-05",
+          "communication": [
+            {
+              "language": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/valueset/languages",
+                    "code": "en"
+                  }
+                ],
+                "preferred": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Patient/5"
+        },
+        "resource": {
+          "resourceType": "Patient",
+          "name": [
+            {
+              "given": [
+                "Uncle"
+              ],
+              "family": "Partner"
+            }
+          ],
+          "active": true,
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "666-555-1212"
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1953-09-05",
+          "communication": [
+            {
+              "language": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/valueset/languages",
+                    "code": "en"
+                  }
+                ],
+                "preferred": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Group/1"
+        },
+        "resource": {
+          "resourceType": "Group",
+          "identifier": {
+            "system": "http://example.com/group-identifier",
+            "value": "AbbyJohnsonHUDGroup"
+          },
+          "type": "person",
+          "actual": true,
+          "code": {
+            "text": "HUD local organization"
+          },
+          "quantity": 4,
+          "managingEntity": {
+            "display": "Organization/HUD"
+          },
+          "member": [
+            {
+              "entity": {
+                "display": "Patient/1"
+              }
+            },
+            {
+              "entity": {
+                "display": "Patient/2"
+              }
+            },
+            {
+              "entity": {
+                "display": "Patient/3"
+              }
+            },
+            {
+              "entity": {
+                "display": "Patient/4"
+              }
+            },
+            {
+              "entity": {
+                "display": "Patient/5"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Condition/Housing"
+        },
+        "resource": {
+          "resourceType": "Condition",
+          "identifier": {
+            "system": "http://example.com/condition-identifier",
+            "value": "12345"
+          },
+          "verificationStatus": "confirmed",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/valueset/condition-category",
+                  "code": "housing-instability",
+                  "display": "Housing Instability"
+                }
+              ]
+            }
+          ],
+          "severity": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "123456",
+                "display": "Severe"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "12345-6",
+                "display": "Housing Instability"
+              }
+            ]
+          },
+          "subject": {
+            "display": "Patient/2"
+          },
+          "onsetDateTime": "2024-04-01",
+          "recordedDate": "2023-11-06",
+          "recorder": {
+            "display": "Practitioner/1"
+          },
+          "participant": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/valueset/participant-type",
+                    "code": "social-worker",
+                    "display": "Social Worker"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "ServiceRequest/housing"
+        },
+        "resource": {
+          "resourceType": "ServiceRequest",
+          "id": "example-service-request",
+          "text": {
+            "status": "generated",
+            "div": "<div>Summary</div>"
+          },
+          "intent": "proposal",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/valueset/service-category",
+                  "code": "housing-instability",
+                  "display": "Housing Instability"
+                }
+              ]
+            }
+          ],
+          "priority": "urgent",
+          "code": {
+            "coding": [
+              {
+                "system": "http://example.com/terminology",
+                "code": "ask-terminology-group",
+                "display": "Ask Terminology Group"
+              }
+            ]
+          },
+          "subject": {
+            "display": "Group/1"
+          },
+          "occurrenceDateTime": "2024-04-01",
+          "requestor": {
+            "display": "Practitioner/456"
+          },
+          "performerType": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.com/terminology",
+                  "code": "social-worker",
+                  "display": "Social Worker"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Goal/housing"
+        },
+        "resource": {
+          "resourceType": "Goal",
+          "id": "example-goal",
+          "text": {
+            "status": "generated",
+            "div": "<div>From SMEs</div>"
+          },
+          "lifecycleStatus": "planned",
+          "achievementStatus": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/valueset/goal-status",
+                "code": "in-progress",
+                "display": "In Progress"
+              }
+            ]
+          },
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.com/terminology",
+                  "code": "housing-instability",
+                  "display": "Housing Instability"
+                }
+              ]
+            }
+          ],
+          "priority": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/valueset/goal-priority",
+                "code": "high-priority",
+                "display": "High Priority"
+              }
+            ]
+          },
+          "statusDate": "2023-11-06",
+          "statusReason": "Grandmother will not be able to be Guardian",
+          "expressedBy": {
+            "display": "Practitioner/789"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Encounter/Observational"
+        },
+        "resource": {
+          "resourceType": "Encounter",
+          "id": "example-encounter",
+          "identifier": [
+            {
+              "system": "http://example.com/identifier",
+              "value": "12345"
+            }
+          ],
+          "status": "completed",
+          "class": {
+            "system": "http://hl7.org/fhir/v3/ActCode",
+            "code": "obsenc",
+            "display": "Observational Encounter"
+          },
+          "type": [
+            {
+              "coding": [
+                {
+                  "system": "http://example.com/terminology",
+                  "code": "your-code-here",
+                  "display": "Your Code Here"
+                }
+              ]
+            }
+          ],
+          "serviceType": {
+            "coding": [
+              {
+                "system": "http://example.com/terminology",
+                "code": "aged-care-assessment",
+                "display": "Aged Care Assessment"
+              }
+            ]
+          },
+          "priority": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v3/ActPriority",
+                "code": "I",
+                "display": "I - High"
+              }
+            ]
+          },
+          "subject": {
+            "display": "Group/123"
+          },
+          "participant": [
+            {
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://example.com/terminology",
+                      "code": "social-worker",
+                      "display": "Social Worker"
+                    }
+                  ]
+                }
+              ],
+              "individual": {
+                "display": "Practitioner/456"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Practitioner/NancySmith"
+        },
+        "resource": {
+          "resourceType": "Practitioner",
+          "id": "example-practitioner",
+          "identifier": [
+            {
+              "system": "http://example.com/identifier",
+              "value": "12345"
+            }
+          ],
+          "active": true,
+          "name": [
+            {
+              "given": [
+                "Nancy"
+              ],
+              "family": "Smith"
+            }
+          ],
+          "gender": "female"
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Organization/HUD"
+        },
+        "resource": {
+          "resourceType": "Organization",
+          "id": "example-organization",
+          "identifier": [
+            {
+              "system": "http://example.com/identifier",
+              "value": "67890"
+            }
+          ],
+          "active": true,
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/organization-type",
+                "code": "bus",
+                "display": "Business"
+              }
+            ]
+          },
+          "name": "HUD Regional Authority for ...",
+          "contact": [
+            {
+              "purpose": {
+                "coding": [
+                  {
+                    "system": "http://example.com/terminology",
+                    "code": "purpose-code",
+                    "display": "Purpose Code"
+                  }
+                ]
+              },
+              "name": "Robert Johnson",
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "800-555-1212"
+                }
+              ],
+              "address": {
+                "line": [
+                  "Address Line 1",
+                  "Address Line 2"
+                ],
+                "city": "City",
+                "state": "State",
+                "postalCode": "12345",
+                "country": "Country"
+              }
+            }
+          ],
+          "endpoint": [
+            {
+              "display": "Endpoint/1"
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "POST",
+          "url": "Observation/example"
+        },
+        "resource": {
+          "resourceType": "Observation",
+          "id": "example-observation",
+          "identifier": [
+            {
+              "system": "http://example.com/identifier",
+              "value": "54321"
+            }
+          ],
+          "status": "final",
+          "category": [
+            {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/observation-category",
+                  "code": "your-category-code",
+                  "display": "Your Category"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "12345-6",
+                "display": "Your LOINC Code"
+              }
+            ]
+          },
+          "subject": {
+            "display": "Patient/1"
+          },
+          "encounter": {
+            "display": "Encounter/456"
+          },
+          "effectiveDateTime": "2024-03-01T00:00:00Z",
+          "performer": [
+            {
+              "display": "Practitioner/789"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://example.com/terminology",
+                "code": "homelessness",
+                "display": "Homelessness"
+              }
+            ]
+          },
+          "note": "Filling Note"
+        }
+      }
+    ],
+    "type": "transaction",
+    "resourceType": "Bundle"
+  }

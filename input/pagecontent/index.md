@@ -17,11 +17,7 @@ ACF and other federal and state agencies are using FHIR-based systems to assist 
 The project objective is to reduce the barriers faced in effectively and efficiently delivering FHIR-based systems that incorporate social services and social determinants to improve health outcomes. A secondary objective is to increase the scope and membership of the HL7 community in their use of the FHIR standard.
 
  
-### Logical Model for Social Services (EFSS)
-
-
-<figure>
-{%include social.svg%}
-<figcaption><b>Figure 1: Logical Model for Enhancing FHIR for Social Services</b></figcaption>
-</figure>
-<br clear="all" />
+## SCOPE CONSIDERATIONS
+Enhancing FHIR for Social Services is not meant to be a complete social services closed loop referral process standard. 
+There is lots of work already being done and to be done to provide such a complete standard but it is beyond the scope of this IG.
+This IG will be complementary to such follow on work.

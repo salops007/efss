@@ -26,10 +26,28 @@ Title: "Membership"
 Description: "Membership"
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
 * ^kind = #complex-type
+* obeys membership-1
+* individual 1..1 SU Individual "Individual who requires service(s)" "Individual"
+* membership 0..1 SU CodeableConcept "Type of membership, HUD household for instance" "Membership"
+* effectiveTime 1..1 SU Period "When the membership was active" "Effective Time"
+* status 0..* SU CodeableConcept "status" "Status"
+* role 0..* SU CodeableConcept "Possible role person is as part as it pertains to the type of membershihp, Head of Household for HUD Household" "Status"
+* verification 0..* SU CodeableConcept "Verification status of the membership/eligbility of this individual in set" "Verification"
+
+Resource: Association
+Id: Association
+Parent: Resource
+Title: "Association"
+Description: "Association"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
+* ^kind = #complex-type
 * obeys relatedindividual-1
-* individual 1..1 SU Individual "individual" "Individual"
-* membership 1..1 SU CodeableConcept "relationship" "Relationship"
-* effectiveTime 1..1 SU Period "effectiveTime" "Effective Time"
+* association 1..1 SU Reference(Individual or Organization) "individual" "Individual"
+* type 1..1 SU CodeableConcept "Type of relationship, for instance biological daugher or co-habitant" "Relationship"
+* effectiveTime 0..1 SU Period "When the association is/was active" "Effective Time"
+* effectiveTiming 0..1 SU Timing "When the association is in effect during the effect time; For instance co-habition 6 weeks out of the year due to divorece settlement" "Effective Time"
+* status 0..* SU CodeableConcept "status" "Status"
+* verification 0..* SU CodeableConcept "Verification status of association" "Verification"
 
 Invariant: membership-1
 Description: "Effective Time has start date"
@@ -60,7 +78,7 @@ Description: "A single human being as distinct from a group, class, or family."
 * telecom 0..* SU ContactPoint "telecom" "Telecom"
 * gender 0..1 SU code "gender" "Gender"
 * birthDate 0..1 SU date "birthDate" "birthDate"
-* address 0..* SU Address "address" "address"
+* address 0..* SU Address "address" "Address"
 * maritalStatus 0..1 SU CodeableConcept "maritalStatus" "Marital Status"
 * relatedIndividual  0..* SU RelatedIndividual "relatedIndividual" "Related Individual"
 
@@ -68,15 +86,15 @@ Description: "A single human being as distinct from a group, class, or family."
 Resource: LifeSet
 Id: LifeSet
 Parent: DomainResource
-Title: "LifeSet"
-Description: "The collection of individuals associated with subject"
+Title: "Life Set"
+Description: "Life Set is an amalgamation of the persons/groups who constitute the interactions and relationships from the perspectice of an individual.  The associations from the individual to the person/group are explicit in nature as to avoid confusion and structured to properly elaborate all aspects of the particular association"
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * ^kind = #resource
 * obeys individual-1
+* subject 1..1 SU Individual "Individual whose associations these are" "Individual"
 * identifier 0..* SU Identifier "identifier" "Identifier"
-
-
-* relatedIndividual  0..* SU RelatedIndividual "relatedIndividual" "Related Individual"
+* association 0..* SU Association  "Association" "Association"
+// * relatedIndividual  0..* SU Individual "relatedIndividual" "Related Individual"
 
 Invariant:   individual-1
 Description: "Individual.name.given or Individual.name.family or both SHALL be present"
@@ -85,24 +103,24 @@ Expression:  "family.exists() or given.exists()"
 XPath:       "f:given or f:family"
 
 
-Resource: SreeningGroup
-Id: SreeningGroup
+Resource: ScreeningSet
+Id: ScreeningSet
 Parent: DomainResource
-Title: "Social Group"
-Description: "A social group is a collection of individuals who come together and interact with one another based on shared characteristics, interests, or purposes"
+Title: "Screening Set"
+Description: "Screening Set is a composition of individuals in need of service(s). The focus of the Screening Set is provide an effecient construct for identifying and illustraing the individuals in the composition.  The Screen Set itself is meant to be transaction and temporal in nature.  The Screen Set would be active while the steps taken to acquire the services have been completed. Screenig Set should be viewed as the trigger for acquisition process for the required services but not utilized for the acquisition workflow operations "
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * ^kind = #resource
 * identifier 0..* SU Identifier "identifier" "Identifier"
-* category 0..* SU CodeableConcept "category" "category"
-* code 0..* SU CodeableConcept "type" "type"
+* serviceCategory 0..* SU CodeableConcept "general classificaiton of the services" "serviceCategory"
+* service 0..* SU CodeableConcept "one or more specific services needed" "serviceProgramb"
 * status 1..1 SU code "status" "status"
 * membership 0..* Membership  "Membership" "Membership"
 
 
-Profile:  HUDHouseholdGroup
-Parent:    SreeningGroup
-Id:       hud-household-group
-Title: "HUD Household Group"
-Description: "HUD Household Group is two or more persons who live in the same dwelling unit whether or not they are related to one another;"
-* code  = LNC#1234 "HUD Household Group"
-* membership 2..*
+// Profile:  HUDHouseholdGroup
+// Parent:    ScreeningSet
+// Id:       hud-household-group
+// Title: "HUD Household Group"
+// Description: "HUD Household Group is two or more persons who live in the same dwelling unit whether or not they are related to one another;"
+// * code  = LNC#1234 "HUD Household Group"
+// * membership 2..*

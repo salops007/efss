@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../fhir-gender-harmony"
+		},
+		{
+			"path": "../fhir-mCODE-ig"
 		}
 	]
 }
