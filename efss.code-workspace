@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../fhir-mCODE-ig"
+		},
+		{
+			"path": "../mcc-sample-data"
 		}
 	]
 }

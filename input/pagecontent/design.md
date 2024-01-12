@@ -59,3 +59,11 @@ Voucher Use: Once a family receives a housing choice voucher, they can use it to
 Annual Reexamination: The family's eligibility and the amount of assistance are reassessed annually by the PHA. Changes in income, family composition, or other circumstances may affect the level of assistance.
 
 It's important to note that specific eligibility criteria and program details may vary by locality, as PHAs have some flexibility in administering the program within the federal guidelines. Families interested in the Section 8 Housing Choice Voucher Program should contact their local PHA for the most accurate and up-to-date information based on their specific area.
+
+
+# Group
+An organization is a group of individuals working together towards common goals and objectives. It can take various forms, such as a business, non-profit, government agency, or any structured entity where people collaborate to achieve specific purposes. Organizations typically have defined roles, responsibilities, and a hierarchical structure to facilitate coordination and efficiency in pursuing their missions or activities.
+
+
+# Legal jurisdiction
+Legal jurisdiction refers to the authority or power of a legal entity, such as a court or government, to make and enforce laws within a specific geographical area or over certain individuals or entities. It defines the scope of the legal system's control and influence. Jurisdiction can be based on factors such as territory, subject matter, or the individuals involved. Different levels of government, both within a country and internationally, may have distinct jurisdictions. Understanding jurisdiction is crucial in determining which laws apply to a particular situation and which legal authorities have the right to adjudicate or enforce those laws.

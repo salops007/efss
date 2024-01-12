@@ -34,6 +34,17 @@ Description: "Membership"
 * role 0..* SU CodeableConcept "Possible role person is as part as it pertains to the type of membershihp, Head of Household for HUD Household" "Status"
 * verification 0..* SU CodeableConcept "Verification status of the membership/eligbility of this individual in set" "Verification"
 
+Resource: Qualification
+Id: Qualification
+Parent: Resource
+Title: "Qualification"
+Description: "Qualification"
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
+* ^kind = #complex-type
+* type 1..1 SU CodeableConcept "Type of qualification"
+* value 1..1 SU Quantity "Verification status of association" "Verification"
+
+
 Resource: Association
 Id: Association
 Parent: Resource
@@ -41,13 +52,15 @@ Title: "Association"
 Description: "Association"
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
 * ^kind = #complex-type
-* obeys relatedindividual-1
-* association 1..1 SU Reference(Individual or Organization) "individual" "Individual"
+* association 1..1 SU Reference(Individual or Organization or LegalAuthority) "individual" "Individual"
 * type 1..1 SU CodeableConcept "Type of relationship, for instance biological daugher or co-habitant" "Relationship"
 * effectiveTime 0..1 SU Period "When the association is/was active" "Effective Time"
 * effectiveTiming 0..1 SU Timing "When the association is in effect during the effect time; For instance co-habition 6 weeks out of the year due to divorece settlement" "Effective Time"
 * status 0..* SU CodeableConcept "status" "Status"
 * verification 0..* SU CodeableConcept "Verification status of association" "Verification"
+* qualification 0..* Qualification "Qualification" "Qualification"
+
+
 
 Invariant: membership-1
 Description: "Effective Time has start date"
@@ -81,6 +94,8 @@ Description: "A single human being as distinct from a group, class, or family."
 * address 0..* SU Address "address" "Address"
 * maritalStatus 0..1 SU CodeableConcept "maritalStatus" "Marital Status"
 * relatedIndividual  0..* SU RelatedIndividual "relatedIndividual" "Related Individual"
+* veteranStatus 0..1 SU CodeableConcept "veteranStatus" "Veteran Status"
+* healthStatus 0..* SU CodeableConcept "healthStatus" "Health Status"
 
 
 Resource: LifeSet
@@ -90,7 +105,6 @@ Title: "Life Set"
 Description: "Life Set is an amalgamation of the persons/groups who constitute the interactions and relationships from the perspectice of an individual.  The associations from the individual to the person/group are explicit in nature as to avoid confusion and structured to properly elaborate all aspects of the particular association"
 * ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
 * ^kind = #resource
-* obeys individual-1
 * subject 1..1 SU Individual "Individual whose associations these are" "Individual"
 * identifier 0..* SU Identifier "identifier" "Identifier"
 * association 0..* SU Association  "Association" "Association"
@@ -116,6 +130,21 @@ Description: "Screening Set is a composition of individuals in need of service(s
 * status 1..1 SU code "status" "status"
 * membership 0..* Membership  "Membership" "Membership"
 
+
+
+Resource: LegalAuthority
+Id: LegalAuthority
+Parent: DomainResource
+Title: "LegalAuthority"
+Description: "A legal authority refers to a source of law or a body that has the power to make and enforce laws within a particular jurisdiction."
+* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/DomainResource"
+* ^kind = #resource
+* identifier 0..* SU Identifier "identifier" "Identifier"
+* active 1..1 SU boolean "active" "active"
+* name 0..* SU string "name" "name"
+* alias 0..* SU string "name" "name"
+* telecom 0..* SU ContactPoint "telecom" "Telecom"
+* partOf 0..* SU Reference(LegalAuthority) "legalAuthority" "LegalAuthority"
 
 // Profile:  HUDHouseholdGroup
 // Parent:    ScreeningSet

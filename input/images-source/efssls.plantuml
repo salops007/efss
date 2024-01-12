@@ -1,0 +1,70 @@
+@startuml
+
+
+scale 620 width
+scale 620 height
+
+!theme toy
+
+skinparam headerFontSize 20
+header "Figure 1"
+@startuml
+!theme lightgray
+
+title Enhancing FHIR for Social Services
+
+class Individual {
+active: boolean
+identifier:Identifier
+name : HumanName
+address:Address
+birthdate : Date
+gender : Code
+martialStatus : Code
+communication : communication
+}
+
+ 
+ 
+
+class LifeSet {
+    
++ individual : Individual
+}
+
+LifeSet : category : Code
+LifeSet : type : Code
+ 
+
+' Individual "*" <--o "0" LifeSet : association
+
+' Individual "*" <--o "1" ScreeningGroup : member
+
+   
+
+ 
+ 
+LifeSet "0..*" - "1..1" Individual
+(LifeSet, Individual) .. Association
+
+class Association {
+   tyoe : Code
+   effectiveTime : Date
+   effectiveTiming : Timing
+   status : Code
+   verification : Code
+   qualificatoin : Qualification
+   
+}
+
+LifeSet "0..*" - "1..1" Organization
+(LifeSet, Organization) .. Association
+ 
+LifeSet "0..*" - "1..1" LegalAuthority
+(LifeSet, LegalAuthority) .. Association
+ 
+
+
+   
+ 
+@enduml

@@ -2,8 +2,8 @@
   "entry": [
     {
       "request": {
-        "method": "POST",
-        "url": "Patient/1"
+        "method": "PUT",
+        "url": "Patient/abby-mcIntyre"
       },
       "resource": {
         "resourceType": "Patient",
@@ -56,8 +56,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Patient/2"
+        "method": "PUT",
+        "url": "Patient/sarah-kelly"
       },
       "resource": {
         "resourceType": "Patient",
@@ -95,8 +95,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Patient/3"
+        "method": "PUT",
+        "url": "Patient/andy-smith"
       },
       "resource": {
         "resourceType": "Patient",
@@ -132,8 +132,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Patient/4"
+        "method": "PUT",
+        "url": "Patient/ben-jameson"
       },
       "resource": {
         "resourceType": "Patient",
@@ -171,8 +171,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Patient/5"
+        "method": "PUT",
+        "url": "Patient/tim-harper"
       },
       "resource": {
         "resourceType": "Patient",
@@ -210,8 +210,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Group/1"
+        "method": "PUT",
+        "url": "Group/hud"
       },
       "resource": {
         "resourceType": "Group",
@@ -226,32 +226,38 @@
         },
         "quantity": 4,
         "managingEntity": {
-          "display": "Organization/HUD"
+          "reference": "Organization/HUD"
         },
         "member": [
           {
             "entity": {
-              "display": "Patient/1"
+              "display": "abby-mcIntyre",
+              "reference": "Patient/abby-mcIntyre"
             }
           },
           {
             "entity": {
-              "display": "Patient/2"
+              "display": "sarah-kelly",
+              "reference": "Patient/sarah-kelly"
             }
           },
           {
             "entity": {
-              "display": "Patient/3"
+              "display": "andy-smith",
+              "reference": "Patient/andy-smith"
             }
           },
           {
             "entity": {
-              "display": "Patient/4"
+              "display": "ben-jameson",
+              "reference": "Patient/ben-jameson"
+              
             }
           },
           {
             "entity": {
-              "display": "Patient/5"
+              "display": "tim-harper",
+              "reference": "Patient/tim-harper"
             }
           }
         ]
@@ -259,8 +265,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Condition/Housing"
+        "method": "PUT",
+        "url": "Condition/housing-instability"
       },
       "resource": {
         "resourceType": "Condition",
@@ -323,8 +329,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "ServiceRequest/housing"
+        "method": "PUT",
+        "url": "ServiceRequest/housing-instability"
       },
       "resource": {
         "resourceType": "ServiceRequest",
@@ -377,8 +383,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Goal/housing"
+        "method": "PUT",
+        "url": "Goal/housing-instability"
       },
       "resource": {
         "resourceType": "Goal",
@@ -426,8 +432,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Encounter/Observational"
+        "method": "PUT",
+        "url": "Encounter/age-care-assessment"
       },
       "resource": {
         "resourceType": "Encounter",
@@ -438,7 +444,7 @@
             "value": "12345"
           }
         ],
-        "status": "completed",
+      
         "class": {
           "system": "http://hl7.org/fhir/v3/ActCode",
           "code": "obsenc",
@@ -498,8 +504,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Practitioner/NancySmith"
+        "method": "PUT",
+        "url": "Practitioner/nancy-smith"
       },
       "resource": {
         "resourceType": "Practitioner",
@@ -524,12 +530,11 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Organization/HUD"
+        "method": "PUT",
+        "url": "Organization/hud"
       },
       "resource": {
         "resourceType": "Organization",
-        "id": "example-organization",
         "identifier": [
           {
             "system": "http://example.com/identifier",
@@ -586,8 +591,8 @@
     },
     {
       "request": {
-        "method": "POST",
-        "url": "Observation/example"
+        "method": "PUT",
+        "url": "Observation/homelessness"
       },
       "resource": {
         "resourceType": "Observation",
