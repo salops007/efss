@@ -1,0 +1,61 @@
+import requests
+import json
+
+# Base URL for the FHIR test server
+fhir_base_url = "https://gw.interop.community/ACFIndividualIG/open"
+
+# Function to perform a FHIR query with error handling
+def fhir_query(resource_type, params=None):
+    try:
+        response = requests.get(f'{fhir_base_url}/{resource_type}', params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.HTTPError as e:
+        return {'error': f'HTTP error occurred: {e.response.status_code} {e.response.reason}'}
+    except requests.ConnectionError:
+        return {'error': 'Failed to connect to the server'}
+    except requests.Timeout:
+        return {'error': 'Request timed out'}
+    except requests.RequestException as e:
+        return {'error': f'An error occurred: {e}'}
+
+# Function to get all patients with error handling
+def get_all_patients():
+    patients_data = fhir_query("Patient")
+    if 'error' in patients_data:
+        print(patients_data['error'])
+        return []
+    return patients_data
+
+# Function to extract household ID from patient extensions
+def get_household_id_from_extensions(extensions):
+    for extension in extensions:
+        if 'householdId' in extension:  # Replace 'householdId' with the correct key
+            return extension['householdId']
+    return None
+
+# Function to organize patients into households based on address
+def organize_into_households(patients_data):
+    if not patients_data:
+        return {}
+
+    households = {}
+    for patient in patients_data.get("entry", []):
+        patient_info = patient.get("resource", {})
+        address_lines = [line for addr in patient_info.get("address", []) for line in addr.get("line", [])]
+        address_str = ", ".join(address_lines)
+
+        if address_str:
+            households.setdefault(address_str, []).append(patient_info)
+
+    return households
+
+
+# Get patient data
+patients_data = get_all_patients()
+
+# Organize patients into households based on address
+households_data = organize_into_households(patients_data)
+
+# Pretty-print the households data
+print(json.dumps(households_data, indent=4))

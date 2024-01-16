@@ -1,0 +1,63 @@
+import requests
+import json
+
+# Base URL for the FHIR test server
+fhir_base_url = "https://gw.interop.community/ACFIndividualIG/open"
+
+# Configuration for which resources to query
+resources_to_query = {
+    "Patient": False,
+    "AllergyIntolerance": False,
+    "CarePlan": False,
+    "Condition": False,
+    "DiagnosticReport": False,
+    "Encounter": False,
+    "Goal": True,
+    "Group": False,
+    "Immunization": False,
+    "Medication": False,
+    "MedicationAdministration": False,
+    "Observation": False,
+    "Organization": False,
+    "Practitioner": False,
+    "Procedure": False,
+    "ServiceRequest": False
+}
+
+# Function to perform a FHIR query
+def fhir_query(resource_type, params=None):
+    try:
+        response = requests.get(f'{fhir_base_url}/{resource_type}', params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.HTTPError as e:
+        return f'HTTP error occurred: {e.response.status_code} {e.response.reason}'
+    except requests.ConnectionError:
+        return 'Failed to connect to the server'
+    except requests.Timeout:
+        return 'Request timed out'
+    except requests.RequestException as e:
+        return f'An error occurred: {e}'
+
+# Function to query a specific resource if enabled in the configuration
+def query_resource_if_enabled(resource_type, params=None):
+    if resources_to_query.get(resource_type):
+        return fhir_query(resource_type, params)
+    else:
+        return f"{resource_type} querying is disabled."
+
+# Function to get data for all enabled resources
+def get_all_enabled_resources():
+    results = {}
+    for resource_type, enabled in resources_to_query.items():
+        if enabled:
+            results[resource_type] = query_resource_if_enabled(resource_type)
+    return results
+
+# Get data for all enabled resources
+enabled_resources_data = get_all_enabled_resources()
+
+# Pretty-print the data for enabled resources
+for resource_type, data in enabled_resources_data.items():
+    print(f"{resource_type} Data:")
+    print(json.dumps(data, indent=4))
