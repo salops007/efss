@@ -1,3 +1,29 @@
+##  Enhancing FHIR for Social Services (EFSS)  
+It is becoming increasingly clear that FHIR will be the platform for delivering software applications for care delivery systems. The Enhancing FHIR to Address Social Services and Social Determinants Project seeks to extend the use of FHIR to effectively and efficiently support Social Services.  The HL7 Gravity Accelerator Program has done significant work in the context of social domains. This guide leverages their work and is a Companion Guide to the Gravity Project’s SDOH Clinical Care 2.1 Implementation Guide.  
+
+Enhancing the FHIR Platform to address social services enables FHIR to provide the best possible platform to provide a view of Whole Person Care (WPC).  Whole Person Care provides a view of an individual’s clinical, behavioral, and social needs and their support network. It is becoming increasingly accepted that all of these needs must be addressed together to promote well-being and healthy outcomes.  
+
+This Companion Guide is developed by the HHS Working Group. (do we need the HHS mission here). The project and this implementation guide are focused on the U.S. environment. However, the basic constructs and interaction patterns may well be applicable outside the U.S.  
+
+### Providing Better Outcomes ###
+It is becoming increasingly evident that Social Determinants (SD) are key factors in determining the well-being of an individual and can negatively impact clinical conditions when these social needs are not met. Numerous studies have shown the impact of SD factors. For example, a National Academy of Medicine Report stated that “Medical care is estimated to account for only 10-20 percent of the modifiable contributors to healthy outcomes for a population. The other 80 to 90 percent are sometimes broadly called the “SDoH”. Significant resources are expended by non-clinical organizations to deliver social and human services to address SD needs. For these non-clinical organizations, their work focuses on the person or individual, their social relationships, and providing social services that can improve the well-being of the individual.  
+
+### Enhancing FHIR ###
+This work grew out of experiences developing FHIR solutions enabling a WPC view that incorporated social needs with clinical and behavioral needs. These care coordination and care management solutions included care coordination and care management  Social Services pathways that include assessment and determination of needs, providing appropriate services, monitoring, and measuring outcomes.  See Gravity SDOH Clinical Care 2.1 Implementation Guide Conceptual Model.  
+
+During their development, it was found that issues were discovered implementing membership of individuals in groups such as families and households and the need to understand the roles and associations between individuals and within a group. Additionally, these and other relationships between individuals can provide a view into a larger support system for individuals that can help in the person’s journey.  
+
+**Relationships to other IG**
+
+Gravity SDOH  
+US Core  
+HL7 Domain Analysis Model: Patient Centered Care Team, Release 1  
+Others to be added  
+
+
+---  
+---  
+
 ##  Enhancing FHIR for Social Services (EFSS)
 
 ### Design Considerations
