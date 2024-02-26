@@ -17,6 +17,19 @@
         ],
         "birthDate": "2011-05-05",
         "gender": "female",
+        "address" : [{
+          "use" : "home",
+          "type" : "both",
+          "text" : "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+          "line" : ["534 Erewhon St"],
+          "city" : "PleasantVille",
+          "district" : "Rainbow",
+          "state" : "Vic",
+          "postalCode" : "3999",
+          "period" : {
+            "start" : "1974-12-25"
+          }
+        }],
         "contact": [
           {
             "relationship": [
@@ -78,6 +91,19 @@
         ],
         "gender": "female",
         "birthDate": "1950-09-05",
+        "address" : [{
+          "use" : "home",
+          "type" : "both",
+          "text" : "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+          "line" : ["534 Erewhon St"],
+          "city" : "PleasantVille",
+          "district" : "Rainbow",
+          "state" : "Vic",
+          "postalCode" : "3999",
+          "period" : {
+            "start" : "1974-12-25"
+          }
+        }],
         "communication": [
           {
             "language": {
@@ -154,6 +180,20 @@
         ],
         "gender": "male",
         "birthDate": "1986-04-15",
+        "address" : [{
+          "use" : "home",
+          "type" : "both",
+          "text" : "999 Main St PeasantVille, Rainbow, Vic  3999",
+          "line" : ["999 Main St"],
+          "city" : "PleasantVille",
+          "district" : "Rainbow",
+          "state" : "Vic",
+          "postalCode" : "3999",
+          "period" : {
+            "start" : "1974-12-25"
+          }
+        }],
+
         "communication": [
           {
             "language": {
@@ -193,6 +233,19 @@
         ],
         "gender": "male",
         "birthDate": "1988-08-21",
+        "address" : [{
+          "use" : "home",
+          "type" : "both",
+          "text" : "999 Main St PeasantVille, Rainbow, Vic  3999",
+          "line" : ["999 Main St"],
+          "city" : "PleasantVille",
+          "district" : "Rainbow",
+          "state" : "Vic",
+          "postalCode" : "3999",
+          "period" : {
+            "start" : "1974-12-25"
+          }
+        }],
         "communication": [
           {
             "language": {
