@@ -9,7 +9,8 @@ The work product is a Companion Guide (Guide) to the Gravity Project’s SDOH Cl
 1. FHIR System – A FHIR system in this Guide is a software system that is compliant with the HL7 FHIR Standard. The FHIR System provides a Whole Person Care (WPC) view. A WPC view enables any member of the care team, with appropriate authorization, to view an individual’s record that includes information across clinical, behavioral, and social domains. This record includes the ability to capture an individual’s care support team and their associations with other individuals and social groups such as family, household, religious and spiritual,  and social and work organizations. The FHIR system provides care coordination and care management functional capabilities and can interact with other systems that deliver social services.
 2. Program System – A Program System in this Guide is a software system that accepts referrals from the FHIR System that can address social risks and fulfill social domain goals. Given a referral, the Program System will determine eligibility for the individual or a group the individuals (e.g., family or household) for a program, enroll the participants in the program, and specify who will receive the service, what the service is, when the service(s) are utilized, and other quantifiable properties. This data is provided to the FHIR System that was the source of the referral.
 
-Figure 1 shows how show the interaction between the two actors and its relationship to the SDOH CC IG.
+Figure 1 shows how show the interaction between the two actors and its relationship to the SDOH CC IG.  
+
 ![Enhancement to SDOH CC IG](../../input/images/Enhancement_to_SDOH_CC_IG.jpg)
 > Figure 1: Enhancement to SDOH CC IG  
 Note: This figure needs a graphics person. The figure comes from the Gravity / Cervitas SOCIAL CARE CO-DESIGN FINAL REPORT.
