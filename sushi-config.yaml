@@ -78,11 +78,11 @@ publisher:
 
 pages:
   index.md:
-    title: Home
+    title: Enhancing FHIR for Social Services
   background.md:
     title: Background
   usecase1.md:
-    title: Use Case 1 
+    title: Housing Insecurity Use Case
   implementer.md:
     title: Implementer Considerations      
   design.md:
