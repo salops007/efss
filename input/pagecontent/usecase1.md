@@ -1,7 +1,16 @@
-## Brief Description ##
+### Brief Description ##
 Abby McIntyre is a 12-year-old female and Andy Smith, her 6-year-old half-brother, are living with her grandmother, their legal guardian. Unfortunately, her grandmother has recently been given a medical diagnosis that makes it important for alternative guardianship to be prepared for should the grandmother no longer be able to serve in this role. During a recent interview with Nancy Smith, a social worker with the child welfare agency who is currently working with Abby McIntyre to establish an alternative guardianship, it was discovered that her uncle, Ben Jameson, with whom she is close, has housing insecurity issues that would preclude him from being named her next guardian. Ben has previously been registered in the local HMIS system. Nancy has determined it should be a goal in Abby’s care plan to reduce Ben’s housing insecurity so that he can take on her care should her grandmother no longer be able to house and care for her. 
 
-## Actors ##  
+
+### Use Case 
+{%include housinginsecurityusecase.svg%}
+
+### Sequence 
+{%include housinginsecuritysequence.svg%}
+
+
+
+### Actors ##  
 * **Abby McIntyre:** 12-year-old female receiving care management services through her school social worker using a FHIR-based system.   
 * **Andy Smith:** 6-year-old male half-brother of Abby who is also residing with Abby's grandmother.
 * **Sarah Kelly:** Abby's 73-year old grandmother who is presently Abby's guardian.
@@ -13,7 +22,7 @@ Abby McIntyre is a 12-year-old female and Andy Smith, her 6-year-old half-brot
 * **FHIR System:**  This system is an electronic care coordination system that Nancy uses to help assist and track her client’s progress.  
 * **Program System:** This system delivers housing services including determining an eligible household, enrolling the household in an appropriate service or set of services to address the needs, and providing the users of the FHIR system information so they can document the need is being addressed and to track the service.
 
-## Payload – from FHIR System to Program system ##  
+### Payload – from FHIR System to Program system ##  
 
 The following data elements from the FHIR System should be sent to the Program System to assist them in enrolling the household.  
 * ServiceRequest
@@ -65,7 +74,7 @@ The following data elements from the FHIR System should be sent to the Program S
 * Filtered Individual Conditions / goals
 * Associated Assessments
 
-## Payload – From Program System to FHIR System ##
+### Payload – From Program System to FHIR System ##
 After completion of the enrollment of the Program that address the housing needs, the following data elements from the Program System should be sent to the FHIR System to assist the documenting for the care team the fact the need has been addressed and for the FHIR System to track progress appropriately.  
 * Updated ServiceRequest
   * **Status**
