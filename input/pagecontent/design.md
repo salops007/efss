@@ -1,24 +1,24 @@
-# Background
+### Background
 To formulate Implementation Guidance,  two different FHIR Models were compared. One was a model from the SDOH CC IG. For the other, a Social Services Domain Analysis Model (SS DAM) was developed. A FHIR Server was created for these two models, populated with the persona data in the Use Cases, and FHIR endpoints were implemented and made available on a public site (need link) and at Connectathons. Both approaches were tested and evaluated.  
 
 In addition to the Use Cases driving the persona data, two different data payloads were developed for each Use Case. One payload documents what the FHIR System would send to a Program System to provide sufficient data to describe the Social Service Condition as well as data the would help the Program System determine eligibility for a service that would fulfill the need.  The second payload documents what the Program System would send to the FHIR system about the data about the service provided and to members that will be serviced. This information was used to comparing the two different FHIR Models. 
-# SDOH CC IG Model
+### SDOH CC IG Model
 Two different designs for the FHIR model were considered as FHIR provides the ability to have instances of an individual populated in different FHIR resources. The two Resources considered were populating both the Patient Resource and the Related Person Resource. 
-## Model using the Patient Resource and RelatedPerson Resource
+### Model using the Patient Resource and RelatedPerson Resource
 The first design created used a singular FHIR Patient Resources and FHIR RelatedPerson Resources for all the other personas in the Use Cases. Additional SDOH Profiles of SDOH Goal, SDOH Condition, SDOH Group, SDOH Healthcare Service,  and SDOH Location were also populated based on the Use Cases.  
 
 This approach was never fully implemented and tested. Reasons as to why this approach was abandoned are the following:
 * Only Patients can be members of an SDOH Group. A member of the SDOH Group cannot be a RelatedPerson.
 * The Related Person resource must and can only reference one Patient Resource. In some of the use cases, multiple personas could be Patient. In this situation,  duplicate RelatedPerson resources would have to be created for the same individual having relationships to multiple Patients. For example, if the mother is a patient and the grandmother, husband, and daughter are Related Persons, then if the father is a Patient, the grandmother and daughter will require duplicate instances of their instance of the  RelatedPerson Resource.
 
-## Model using only the Patient Resource
+### Model using only the Patient Resource
 The second FHIR Model evaluated was a design where all individuals of the Use Cases were populated in the Patient Resource. This model was implemented and evaluated.  
 
 The issue encountered with this approach was there was no effective way to capture or discover interpersonal relationships. For example, relationships such as grandmother/granddaughter or guardian/ward either are difficult to capture, discover, and display. Developing processes to compute on these relationships is difficult at best.  
 
 For this model, capturing interpersonal relationships the pattern deployed was, in the Patient Resource, to use the contact backbone property and within that to use the relationship attribute.  (NEED More DETAILED REASONS WHY THIS IS PROBLEMATIC)
 
-## Model using the SS DAM
+### Model using the SS DAM
 The second model implemented, tested, and evaluated was a FHIR implementation derived from a Social Services Domain Analysis Logical Model. This model can be thought of as a “greenfield” model as it was not constrained the SDOH CC IG or the FHIR 4.0.1 Release.  
 
 The following were considerations in the SS DAM.
@@ -34,16 +34,26 @@ INSERT LOGICAL MODEL FROM BALLOT BUILD IMPLEMENTOR CONSIDERATIONS
 PROVIDE AN INTEGRATED VIEW THE TWO FIGURES  
 FOR READABILITY WE MAY WANT TO HAVE A CONCEPTUAL MODEL AND REFERENCE THE LOGICAL MODEL DETAILS FOR EACH CLASS  IN THE ARTIFACTS SECTION  
 
-# What is a Family ?
-# Family 
+
+
+### Design Considerations
+* **Operation versus Persistance Group Management**
+Management of group membership overtime requires overhead operations.  In FHIR - we can propose the use of resolvable location for group (fhir/Group/1234) or a computable group as defined by an operation (fhir/Indvidual/$group?HUDHousehold)
+
+Each option has overhead and complications, resolvable requires versioning and temporal features while computed requires navigable associations to collect the group memberships;  
+
+
+
+### Story of a Family ?
+### Family 
 
 A family is a group of individuals who are related by blood, marriage, adoption, or a shared sense of bond. Families typically form the basic social unit in human societies and serve as a primary context for the upbringing and socialization of children. The structure and dynamics of families can vary widely across cultures and societies, but they often involve emotional connections, mutual support, and shared responsibilities among its members. Families can include parents, children, siblings, grandparents, aunts, uncles, and other relatives, and they play a crucial role in shaping the values, beliefs, and identity of individuals. Additionally, the concept of family can extend beyond biological or legal relationships to include chosen or adopted family members and close-knit social groups.
 
-# Nuclear Family
+### Nuclear Family
 
 A nuclear family, also known as an elementary or conjugal family, is a family unit consisting of two parents (a mother and a father) and their biological or adopted children living together in a single household. This family structure is often contrasted with extended families, which may include additional relatives such as grandparents, aunts, uncles, and cousins living together or in close proximity. The nuclear family is considered a relatively small and self-contained social unit, and it has been a prevalent family structure in many Western societies. However, family structures can vary across cultures and societies, and there is no universally dominant family model.
 
-# HUD Family Perspective
+### HUD Family Perspective
 
 The U.S. Department of Housing and Urban Development (HUD) defines a family in the context of housing programs. According to HUD, a family is defined as:
 
@@ -51,7 +61,7 @@ The U.S. Department of Housing and Urban Development (HUD) defines a family in t
 
 **It's important to note that the specific definition may vary depending on the particular housing program administered by HUD. This definition is from a broad perspective and is used for various HUD programs to determine eligibility for housing assistance.**
 
-# HUD Programs
+### HUD Programs
 
  The U.S. Department of Housing and Urban Development (HUD) administers a variety of programs aimed at providing housing assistance and promoting affordable housing. Some of the key HUD programs include:
 
@@ -78,7 +88,7 @@ Choice Neighborhoods Initiative: Focuses on the transformation of distressed nei
 These programs play a crucial role in addressing various housing needs and challenges, promoting fair housing practices, and improving the overall quality of housing in the United States. Keep in mind that the availability and details of these programs may change over time, and individuals interested in these programs should check with local HUD offices or authorized agencies for the most up-to-date information.
 
 
-#  Section 8 Housing Choice Voucher Program 
+###  Section 8 Housing Choice Voucher Program 
 The Section 8 Housing Choice Voucher Program is designed to assist low-income individuals and families in obtaining safe and decent housing in the private market. The program is administered by local public housing agencies (PHAs) and is funded by the U.S. Department of Housing and Urban Development (HUD). Here are some key points about families eligible for the Section 8 Housing Choice Voucher Program:
 
 Low-Income Requirement: The program is targeted at households with incomes that are below a certain threshold, typically set at 50% of the median income for the area. However, preferences may be given to households with even lower incomes.
@@ -96,9 +106,9 @@ Annual Reexamination: The family's eligibility and the amount of assistance are 
 It's important to note that specific eligibility criteria and program details may vary by locality, as PHAs have some flexibility in administering the program within the federal guidelines. Families interested in the Section 8 Housing Choice Voucher Program should contact their local PHA for the most accurate and up-to-date information based on their specific area.
 
 
-# Group
+### Group
 An organization is a group of individuals working together towards common goals and objectives. It can take various forms, such as a business, non-profit, government agency, or any structured entity where people collaborate to achieve specific purposes. Organizations typically have defined roles, responsibilities, and a hierarchical structure to facilitate coordination and efficiency in pursuing their missions or activities.
 
 
-# Legal jurisdiction
+### Legal jurisdiction
 Legal jurisdiction refers to the authority or power of a legal entity, such as a court or government, to make and enforce laws within a specific geographical area or over certain individuals or entities. It defines the scope of the legal system's control and influence. Jurisdiction can be based on factors such as territory, subject matter, or the individuals involved. Different levels of government, both within a country and internationally, may have distinct jurisdictions. Understanding jurisdiction is crucial in determining which laws apply to a particular situation and which legal authorities have the right to adjudicate or enforce those laws.
