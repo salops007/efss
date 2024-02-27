@@ -79,7 +79,7 @@ Description: "Membership"
   status 0..1 MS and
   role 0..1 MS and
   verification 0..1 MS
-* extension[individual].value[x] only  Reference(IndividualRole) 
+* extension[individual].value[x] only  Reference(IndividualRole or Patient) 
 * extension[individual] ^short = "Individual who requires service(s)"  
 * extension[membership].value[x]  only CodeableConcept 
 * extension[membership] ^short = "Type of membership, HUD household for instance"  

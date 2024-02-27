@@ -10,7 +10,7 @@ This project objective is to reduce the barriers faced to effectively and effici
 
  
 This Companion Guide is developed by the HHS Working Group. (do we need the HHS mission here). The project and this implementation guide are focused on the U.S. environment. However, the basic constructs and interaction patterns may well be applicable outside the U.S.  
-### Closed Loop Referral Considrations ###
+### Closed Loop Referral Considerations ###
 Enhancing FHIR for Social Services is not meant to be a complete social services closed loop referral process standard. 
 There is lots of work already being done and to be done to provide such a complete standard but it is beyond the scope of this IG.
 This IG will be complementary to such follow on work.

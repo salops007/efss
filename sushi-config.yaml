@@ -87,16 +87,26 @@ pages:
     title: Implementer Considerations      
   design.md:
     title: Design Considerations  
+  fam.md:
+    title: FHIR Analysis Model
+  frm.md:
+    title: FHIR Realization Model       
+  logical.md:
+    title: EFSS Logical Model       
         
 menu:
   Home: index.html
   Background: 
     Background: background.html
   Use Cases:  
-    Use Cases 1: usecase1.html
+    Housing Insecurity Use Case: usecase1.html
   Guidance:
     Design Considerations: design.html  
-    Implementer Considerations: implementer.html     
+    Implementer Considerations: implementer.html  
+  Models:
+    EFSS Logical Model: logical.html  
+    FHIR Analysis Model: fam.html  
+    FHIR Realization Model: frm.html             
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
