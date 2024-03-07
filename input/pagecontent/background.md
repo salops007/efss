@@ -14,12 +14,10 @@ The work product is a Companion Guide (Guide) to the Gravity Project’s SDOH Cl
 
 1. FHIR System – A FHIR system in this Guide is a software system that is compliant with the HL7 FHIR Standard. The FHIR System provides a Whole Person Care (WPC) view. A WPC view enables any member of the care team, with appropriate authorization, to view an individual’s record that includes information across clinical, behavioral, and social domains. This record includes the ability to capture an individual’s care support team and their associations with other individuals and social groups such as family, household, religious and spiritual,  and social and work organizations. The FHIR system provides care coordination and care management functional capabilities and can interact with other systems that deliver social services.
 2. Program System – A Program System in this Guide is a software system that accepts referrals from the FHIR System that can address social risks and fulfill social domain goals. Given a referral, the Program System will determine eligibility for the individual or a group the individuals (e.g., family or household) for a program, enroll the participants in the program, and specify who will receive the service, what the service is, when the service(s) are utilized, and other quantifiable properties. This data is provided to the FHIR System that was the source of the referral.
-
-
-
-
  
+In the realm of social care, it's widely acknowledged that an individual's outcomes are significantly influenced by the people around them. For instance, a child with diabetes, residing in a household where one parent is gainfully employed and both parents are actively involved in her care, is likely to experience better outcomes compared to a child with a similar diagnosis living with a single parent who is facing financial struggles and battling drug addiction. In striving for improved outcomes, human services often emphasize this comprehensive understanding of a person, encompassing environmental and relational factors. 
 
+This recognition has spurred the efforts of our working group to devise a technical framework enabling human services to delineate the role of relationships that impact individual outcomes, including family dynamics, household structures, and tribal affiliations. The objective of this project is to standardize the interpretation of these relationships, ensuring that individuals seeking services to enhance their well-being outside clinical settings are accurately comprehended. By adopting this holistic perspective of individuals, we can analyze the support systems and challenges posed by these relationships, which often play pivotal roles in determining improved outcomes.
 
 ### Out-of-Scope: ##
 To deliver a solution for providing WPC in an operational environment is a complex endeavor. This Guide does not address other necessary functional requirements.  
@@ -31,10 +29,3 @@ To deliver a solution for providing WPC in an operational environment is a compl
 **Eligibility for a Social Services Program:** Although of great benefit for an FHIR system would be if a particular individual or group of individuals are eligible for a Social Service, this will be considered in future Use Cases. Having such capability for the FHIR system to do this could increase the efficiency for all parties.  
 
 **Privacy Policies:** It is assumed that data can flow freely and unencumbered between the FHIR System and the Program System as the implementation of Privacy Policies is out of scope. However, consideration of Privacy Policies will need to be considered in the future.
-
-**Insert Michelle’s work here**  
-
-
-
-
- 
